@@ -2,7 +2,13 @@
 syntax on
 set noerrorbells
 set backspace=indent,eol,start
+set signcolumn=yes
+
+"Line numbering
 set relativenumber
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber 
+
 set nu
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -10,9 +16,6 @@ set expandtab
 set smartindent
 set autoindent
 set nowrap
-
-set signcolumn=yes
-highlight clear SignColumn
 
 set noshowmode
 set laststatus=2
@@ -29,6 +32,9 @@ set smartcase
 set scrolloff=8
 
 set ttimeoutlen=10
+
+"Cursor position should remain constant when changing modes
+inoremap <Esc> <Esc>g`^
 
 "Shifting windows
 map <C-h> <C-w>h
@@ -48,8 +54,9 @@ inoremap {} {}
 
 "Compiling 
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!clear;python3' shellescape(@%, 1)<CR>
-autocmd filetype c nnoremap <F9> :w <bar> exec '!clear;gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
-autocmd filetype cpp nnoremap <F9> :w <bar> exec '!clear;g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+autocmd FileType c nnoremap <F9> :w <bar> exec '!clear;gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+autocmd FileType cpp nnoremap <F9> :w <bar> exec '!clear;g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+autocmd FileType java nnoremap <buffer> <F9> :exec '!clear;javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1)<cr>
 
 "vim-plug
 call plug#begin('~/.vim/plugged')
@@ -71,6 +78,9 @@ Plug 'xolox/vim-easytags'
 Plug 'octol/vim-cpp-enhanced-highlight'
 let g:cpp_no_function_highlight = 1
 let g:c_no_function_highlight = 1
+
+Plug 'vim-python/python-syntax'
+let g:python_highlight_all = 1
 
 Plug 'tmsvg/pear-tree'
 Plug 'morhetz/gruvbox'
@@ -94,3 +104,17 @@ inoremap <silent><expr> <Tab>
 let g:gruvbox_contrast_dark='hard'
 set background=dark
 colorscheme gruvbox
+
+"hi Normal guibg=NONE ctermbg=NONE    "This line makes vim transparent
+highlight clear SignColumn
+
+"Line number bar clear
+highlight clear LineNr
+
+" set sensible bracket highlight matches that don't obscure the text
+highlight MatchParen cterm=underline ctermbg=black ctermfg=NONE
+highlight MatchParen gui=underline guibg=black guifg=NONE
+
+" replace variable names
+" For local replace
+nnoremap gr :%s/<C-R><C-W>//gc<left><left><left>
