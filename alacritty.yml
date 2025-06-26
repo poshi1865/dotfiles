@@ -24,11 +24,11 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 2
-    y: 2
+    x: 5
+    y: 5
 
   # Background opacity
-  opacity: 1
+  opacity: 0.98
   # Startup Mode (changes require restart)
   #
   # Values for `startup_mode`:
@@ -65,15 +65,18 @@ window:
 font:
   # Normal (roman) font face
   normal:
-    family: Deja Vu Sans Mono
+    family: Overpass Mono
     style:  Regular
   bold:
-    family: Deja Vu Sans Mono
+    family: Overpass Mono
     style:  Bold
-  size: 10.0
+  size: 11.0
 
 cursor:
   style: Block
+
+env:
+  TERM: xterm-256color
 
 key_bindings:
   - {key: N, mods: Control|Shift, action: ToggleFullscreen}
