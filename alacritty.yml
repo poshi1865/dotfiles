@@ -80,34 +80,108 @@ env:
 
 key_bindings:
   - {key: N, mods: Control|Shift, action: ToggleFullscreen}
+
+# Gruvbox
+# colors:
+#   # Default colors
+#   primary:
+#     # hard contrast: background = '0x1d2021'
+#     # medium contrast: 0x282828
+#     background: '0x1d2021'
+#     # soft contrast: background = '0x32302f'
+#     foreground: '0xebdbb2'
+#
+#   # Normal colors
+#   normal:
+#     black: '0x282828'
+#     red: '0xcc241d'
+#     green: '0x98971a'
+#     yellow: '0xd79921'
+#     blue: '0x458588'
+#     magenta: '0xb16286'
+#     cyan: '0x689d6a'
+#     white: '0xa89984'
+#
+#   # Bright colors
+#   bright:
+#     black: '0x928374'
+#     red: '0xfb4934'
+#     green: '0xb8bb26'
+#     yellow: '0xfabd2f'
+#     blue: '0x83a598'
+#     magenta: '0xd3869b'
+#     cyan: '0x8ec07c'
+#     white: '0xebdbb2'
+
+# # Kanagawa wave
+# colors:
+#   primary:
+#     background: '#1f1f28'
+#     foreground: '#dcd7ba'
+#
+#   normal:
+#     black:   '#090618'
+#     red:     '#c34043'
+#     green:   '#76946a'
+#     yellow:  '#c0a36e'
+#     blue:    '#7e9cd8'
+#     magenta: '#957fb8'
+#     cyan:    '#6a9589'
+#     white:   '#c8c093'
+#
+#   bright:
+#     black:   '#727169'
+#     red:     '#e82424'
+#     green:   '#98bb6c'
+#     yellow:  '#e6c384'
+#     blue:    '#7fb4ca'
+#     magenta: '#938aa9'
+#     cyan:    '#7aa89f'
+#     white:   '#dcd7ba'
+#
+#   selection:
+#     background: '#2d4f67'
+#     foreground: '#c8c093'
+#
+#   indexed_colors:
+#     - index: 16
+#       color: '#ffa066'
+#     - index: 17
+#       color: '#ff5d62'
+
+# Kanagawa dragon
 colors:
-  # COLORSCHEME: gruvbox_dark.yaml
-  # Default colors
   primary:
-    # hard contrast: background = '0x1d2021'
-    # medium contrast: 0x282828
-    background: '0x1d2021'
-    # soft contrast: background = '0x32302f'
-    foreground: '0xebdbb2'
+    background: '#181616'
+    foreground: '#c5c9c5'
 
-  # Normal colors
   normal:
-    black: '0x282828'
-    red: '0xcc241d'
-    green: '0x98971a'
-    yellow: '0xd79921'
-    blue: '0x458588'
-    magenta: '0xb16286'
-    cyan: '0x689d6a'
-    white: '0xa89984'
+    black:   '#0d0c0c'
+    red:     '#c4746e'
+    green:   '#8a9a7b'
+    yellow:  '#c4b28a'
+    blue:    '#8ba4b0'
+    magenta: '#a292a3'
+    cyan:    '#8ea4a2'
+    white:   '#c8c093'
 
-  # Bright colors
   bright:
-    black: '0x928374'
-    red: '0xfb4934'
-    green: '0xb8bb26'
-    yellow: '0xfabd2f'
-    blue: '0x83a598'
-    magenta: '0xd3869b'
-    cyan: '0x8ec07c'
-    white: '0xebdbb2'
+    black:   '#a6a69c'
+    red:     '#e46876'
+    green:   '#87a987'
+    yellow:  '#e6c384'
+    blue:    '#7fb4ca'
+    magenta: '#938aa9'
+    cyan:    '#7aa89f'
+    white:   '#c5c9c5'
+
+  selection:
+    text:       '#c8c093'
+    background: '#2d4f67'
+
+  indexed_colors:
+    - index: 16
+      color: '#b6927b'
+    - index: 17
+      color: '#b98d7b'
+

@@ -822,6 +822,14 @@ require('lazy').setup({
       transparent_mode = false
     },
   },
+  {
+    'rebelot/kanagawa.nvim',
+    opts = {
+        colors = {
+          theme = { all = { ui = { bg_gutter = 'none' }  }}
+        },
+    },
+  },
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
@@ -937,7 +945,7 @@ require('lazy').setup({
 
 -- vim.o.background=dark
 -- vim.cmd([[colorscheme gruvbox]])
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme kanagawa-dragon]])
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
