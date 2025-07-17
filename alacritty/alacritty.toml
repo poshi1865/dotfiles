@@ -1,0 +1,40 @@
+# general.import=["~/.config/alacritty/dayfox.toml"]
+# general.import=["~/.config/alacritty/dawnfox.toml"]
+general.import=["~/.config/alacritty/kanagawa_dragon.toml"]
+#general.import=["~/.config/alacritty/patana.toml"]
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "N"
+mods = "Control|Shift"
+
+[cursor]
+style = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 11.0
+
+[font.bold]
+family = "Overpass Mono"
+style = "Bold"
+
+[font.normal]
+family = "Overpass Mono"
+style = "Medium"
+
+[window]
+decorations = "Full"
+opacity = 0.98
+
+[window.dimensions]
+columns = 90
+lines = 33
+
+[window.padding]
+x = 5
+y = 5
+
+[keyboard]

@@ -43,7 +43,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.o.signcolumn = 'no'
+vim.o.signcolumn = 'yes'
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -160,6 +160,7 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
   'rebelot/kanagawa.nvim',
+  'cvigilv/patana.nvim',
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -818,7 +819,7 @@ require('lazy').setup({
     config = true,
     -- opts = ...,
     opts = {
-      contrast = "hard",
+      contrast = "soft",
       transparent_mode = false
     },
   },
@@ -909,7 +910,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
@@ -943,9 +944,10 @@ require('lazy').setup({
   },
 })
 
--- vim.o.background=dark
 -- vim.cmd([[colorscheme gruvbox]])
 vim.cmd([[colorscheme kanagawa-dragon]])
+-- vim.cmd([[colorscheme patana]])
+-- vim.cmd([[set background=light]])
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
