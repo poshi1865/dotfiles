@@ -160,7 +160,7 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
   'rebelot/kanagawa.nvim',
-  'cvigilv/patana.nvim',
+  'EdenEast/nightfox.nvim',
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -824,6 +824,17 @@ require('lazy').setup({
     },
   },
   {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
+    config = function ()
+      require("onedarkpro").setup({
+        colors = {
+          onelight = { bg = "#F1EFEB" },
+        }
+      })
+    end
+  },
+  {
     'rebelot/kanagawa.nvim',
     opts = {
         colors = {
@@ -945,9 +956,10 @@ require('lazy').setup({
 })
 
 -- vim.cmd([[colorscheme gruvbox]])
-vim.cmd([[colorscheme kanagawa-dragon]])
--- vim.cmd([[colorscheme patana]])
+-- vim.cmd([[colorscheme kanagawa-dragon]])
+vim.cmd([[colorscheme dayfox]])
 -- vim.cmd([[set background=light]])
+-- vim.cmd([[colorscheme onelight]])
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

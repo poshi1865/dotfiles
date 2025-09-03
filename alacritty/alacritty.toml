@@ -1,7 +1,7 @@
-# general.import=["~/.config/alacritty/dayfox.toml"]
+general.import=["~/.config/alacritty/dayfox.toml"]
 # general.import=["~/.config/alacritty/dawnfox.toml"]
-general.import=["~/.config/alacritty/kanagawa_dragon.toml"]
-#general.import=["~/.config/alacritty/patana.toml"]
+#general.import=["~/.config/alacritty/kanagawa_dragon.toml"]
+# general.import=["~/.config/alacritty/patana.toml"]
 
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
