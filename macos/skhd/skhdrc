@@ -37,7 +37,7 @@ shift + alt - 9 : yabai -m window --space 9
 shift + alt - 0 : yabai -m window --space 10
 
 # Fullsreen window
-shift + alt - m : yabai -m window --toggle zoom-fullscreen
+alt - m : yabai -m window --toggle zoom-fullscreen
 
 # Removals
 cmd - h : # no-op, prevents macOS from hiding the app
