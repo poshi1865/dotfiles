@@ -42,7 +42,8 @@ cmd - h: # no-op, prevents macOS from hiding the app
 
 # Close currently focused window
 cmd - q: # removes the default macOS closing keybind
-cmd + shift - q: yabai -m window --close
+cmd + shift - q: # removes the default macOS logout
+alt + shift - q: yabai -m window --close
 
 # Rename current space
 alt + shift - 0x2B: yabai -m space --label "$(osascript -e 'return text returned of (display dialog "Enter space name:" default answer "")')"
